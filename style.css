@@ -1,0 +1,56 @@
+
+
+/* ajouter du contenu avant et aprés un élement */
+::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f1f1f1;
+}
+.inp-wrap{
+    width: 70%;
+    max-width: 600px;
+    position: absolute;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.inp-wrap span{
+    position: absolute;
+    left: 5px;
+    top: 90px;
+    color: red;
+    display: none;
+}
+.input-anim{
+    width: 100%;
+    padding: 25px;
+    border: none;
+    /* styliser: dessin autour de l'élement et à l'extérieur ou autour de la bordure */
+    outline: none;
+    border-radius: 10px;
+    font-size: 25px;
+    /* transition rapide sur le début et décelère sur la fin */
+    transition: border 1s ease-out;
+}
+label{
+    font-style: 25px;
+    position: absolute;
+    color: #333;
+    top:50%;
+    transform: translateY(-50%);
+    padding-left: 8px;
+    transition: all 0.3s ease-out;
+}
+/* animation => le texte remonte qd on saisit du contenu ds l'input*/
+/* explication ligne: */
+/*  pseudo-classe :focus-within qui s'applique lorsque le label a reçu le focus via le clavier ou la souris (par exemple lorsqu'on clique sur un champ d'un formulaire). */
+/* , = et */
+/* inp-wrap:active-input label => éviter que le label ne redescendes dans l'input qd on cliques en dehors de l'input fonction en javascript voir fichier app.js */
+.inp-wrap:focus-within label,inp-wrap.active-input label{
+    top:-24px;
+    padding-left: 2px;
+}
