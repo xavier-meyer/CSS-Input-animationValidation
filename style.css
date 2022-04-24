@@ -49,8 +49,8 @@ label{
 /* explication ligne: */
 /*  pseudo-classe :focus-within qui s'applique lorsque le label a reçu le focus via le clavier ou la souris (par exemple lorsqu'on clique sur un champ d'un formulaire). */
 /* , = et */
-/* inp-wrap:active-input label => éviter que le label ne redescendes dans l'input qd on cliques en dehors de l'input fonction en javascript voir fichier app.js */
-.inp-wrap:focus-within label,inp-wrap.active-input label{
+/* .inp-wrap.active-input label => éviter que le label ne redescendes dans l'input qd on cliques en dehors de l'input fonction en javascript voir fichier app.js */
+.inp-wrap:focus-within label, .inp-wrap.active-input label{
     top:-24px;
     padding-left: 2px;
 }
