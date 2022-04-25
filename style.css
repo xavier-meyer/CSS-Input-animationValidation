@@ -54,3 +54,16 @@ label{
     top:-24px;
     padding-left: 2px;
 }
+
+/* validation */
+.inp-wrap:focus-within .input-anim,
+.inp-wrap.active-input .input-anim{
+    border: 1px solid rgb(145, 207, 52);
+}
+/* class erreur */
+.erreur{
+    border: 1px solid red ! important;
+}
+.visible{
+    display: block ! important;
+}
